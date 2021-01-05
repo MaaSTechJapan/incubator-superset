@@ -41,6 +41,7 @@ import TableChartPlugin from '@superset-ui/plugin-chart-table';
 import TreemapChartPlugin from '@superset-ui/legacy-plugin-chart-treemap';
 import { WordCloudChartPlugin } from '@superset-ui/plugin-chart-word-cloud';
 import WorldMapChartPlugin from '@superset-ui/legacy-plugin-chart-world-map';
+import { TraiconMapChartPlugin } from '@superset-ui/plugin-chart-traicon-map';
 import {
   AreaChartPlugin,
   BarChartPlugin,
@@ -114,6 +115,8 @@ export default class MainPreset extends Preset {
         }),
         new AntdSelectFilterPlugin().configure({ key: 'filter_select' }),
         new AntdRangeFilterPlugin().configure({ key: 'filter_range' }),
+
+        new TraiconMapChartPlugin().configure({ key: 'traicon_map' }),
       ],
     });
   }
