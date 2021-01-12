@@ -40,6 +40,7 @@ import SunburstChartPlugin from '@superset-ui/legacy-plugin-chart-sunburst';
 import TableChartPlugin from '@superset-ui/plugin-chart-table';
 import TreemapChartPlugin from '@superset-ui/legacy-plugin-chart-treemap';
 import { WordCloudChartPlugin } from '@superset-ui/plugin-chart-word-cloud';
+import { KeplerglChartPlugin } from '@superset-ui/plugin-chart-keplergl';
 import WorldMapChartPlugin from '@superset-ui/legacy-plugin-chart-world-map';
 import {
   AreaChartPlugin,
@@ -53,7 +54,9 @@ import {
   LineMultiChartPlugin,
   TimePivotChartPlugin,
 } from '@superset-ui/legacy-preset-chart-nvd3';
+
 import { DeckGLChartPreset } from '@superset-ui/legacy-preset-chart-deckgl';
+
 import {
   EchartsPieChartPlugin,
   EchartsBoxPlotChartPlugin,
@@ -108,6 +111,7 @@ export default class MainPreset extends Preset {
         new TreemapChartPlugin().configure({ key: 'treemap' }),
         new WordCloudChartPlugin().configure({ key: 'word_cloud' }),
         new WorldMapChartPlugin().configure({ key: 'world_map' }),
+        new KeplerglChartPlugin().configure({ key: 'keplergl' }),
         new EchartsTimeseriesChartPlugin().configure({
           key: 'echarts_timeseries',
         }),
